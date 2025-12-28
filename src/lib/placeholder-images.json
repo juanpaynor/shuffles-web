@@ -1,3 +1,58 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "bowling-alley",
+      "description": "Modern bowling alley with neon lights",
+      "imageUrl": "https://images.unsplash.com/photo-1514313122851-5167c4fca5d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxib3dsaW5nJTIwYWxsZXl8ZW58MHx8fHwxNzY2OTQ4NTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bowling alley"
+    },
+    {
+      "id": "billiards-table",
+      "description": "Sleek billiards table under dim light",
+      "imageUrl": "https://images.unsplash.com/photo-1704040686285-dda2bf91eade?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiaWxsaWFyZHMlMjB0YWJsZXxlbnwwfHx8fDE3NjY5NDg1MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "billiards table"
+    },
+    {
+      "id": "darts-board",
+      "description": "Close up of a dart hitting a dartboard",
+      "imageUrl": "https://images.unsplash.com/photo-1703347512479-dd9613600df9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXJ0cyUyMGJvYXJkfGVufDB8fHx8MTc2Njk0ODUxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "darts board"
+    },
+    {
+      "id": "karaoke-room",
+      "description": "Plush private karaoke room with a large screen",
+      "imageUrl": "https://images.unsplash.com/photo-1760598742492-7ad941e658e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxrYXJhb2tlJTIwcm9vbXxlbnwwfHx8fDE3NjY5NDg1MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "karaoke room"
+    },
+    {
+      "id": "modern-bar",
+      "description": "A stylish bar with a wide selection of drinks",
+      "imageUrl": "https://images.unsplash.com/photo-1720694045805-f1bc76e48255?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBiYXJ8ZW58MHx8fHwxNzY2OTQ4NTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern bar"
+    },
+    {
+      "id": "live-event",
+      "description": "A DJ performing at a live event",
+      "imageUrl": "https://images.unsplash.com/photo-1758587421135-f5152430a97a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaiUyMGxpdmUlMjBldmVudHxlbnwwfHx8fDE3NjY5NDg1MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dj live event"
+    },
+    {
+      "id": "nightlife-crowd",
+      "description": "People enjoying the nightlife at a venue",
+      "imageUrl": "https://images.unsplash.com/photo-1588782550189-47b3b2d3263f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuaWdodGxpZmUlMjBjcm93ZHxlbnwwfHx8fDE3NjY5NDg1MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nightlife crowd"
+    },
+    {
+      "id": "cocktail-drink",
+      "description": "A vibrant cocktail on a bar counter",
+      "imageUrl": "https://images.unsplash.com/photo-1681579289891-e9a7b1b0559c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2NrdGFpbCUyMGRyaW5rfGVufDB8fHx8MTc2Njk0MTI5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cocktail drink"
+    },
+    {
+      "id": "city-map",
+      "description": "A stylized map of a city area",
+      "imageUrl": "https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2Njg2NzM0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    }
+  ]
 }
