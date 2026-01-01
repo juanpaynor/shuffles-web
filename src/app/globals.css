@@ -4,30 +4,42 @@
 
 @layer base {
   :root {
-    --background: 348 62% 23%;
-    --foreground: 0 0% 98%;
-    --card: 348 62% 25%;
-    --card-foreground: 0 0% 98%;
-    --popover: 348 62% 23%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 10 96% 62%;
-    --primary-foreground: 348 62% 10%;
-    --secondary: 6 61% 42%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 348 62% 28%;
-    --muted-foreground: 348 5% 65%;
-    --accent: 10 96% 62%;
-    --accent-foreground: 348 62% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 348 62% 30%;
-    --input: 348 62% 30%;
-    --ring: 10 96% 62%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* "Maroon Nightlife" Theme */
+    /* Background: Deep Maroon #5E1626 */
+    /* Primary Accent: Neon Orange #FB6241 */
+
+    --background: 347 62% 23%;
+    /* #5E1626 converted to HSL approx */
+    --foreground: 0 0% 100%;
+    /* White text */
+
+    --card: 347 50% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 347 62% 23%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 11 96% 62%;
+    /* #FB6241 Neon Orange */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 4 57% 43%;
+    /* #AA3A2F Secondary Accent */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 347 30% 30%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 11 96% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 347 30% 35%;
+    --input: 347 30% 35%;
+    --ring: 11 96% 62%;
+
     --radius: 0.5rem;
   }
 }
@@ -36,30 +48,8 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@keyframes animated-gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-15%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    @apply bg-background text-foreground selection:bg-neon-orange selection:text-white;
   }
 }

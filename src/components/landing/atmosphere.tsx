@@ -1,56 +1,66 @@
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { FadeIn } from '@/components/landing/fade-in';
-import { Button } from '../ui/button';
-import Link from 'next/link';
+"use client";
 
-export default function AtmosphereSection() {
-  const crowdImage = PlaceHolderImages.find(p => p.id === 'nightlife-crowd');
-  const cocktailImage = PlaceHolderImages.find(p => p.id === 'cocktail-drink');
+import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
+import { MouseEvent } from 'react';
 
-  return (
-    <section className="relative overflow-hidden py-20 sm:py-32 bg-gradient-to-br from-background to-secondary">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
-          <FadeIn direction="right">
-            <div className="relative">
-              <div className="relative aspect-[4/5] z-10">
-                <Image
-                  src={crowdImage?.imageUrl || `https://picsum.photos/seed/crowd/800/1000`}
-                  alt="Nightlife at Shuffles"
-                  width={800}
-                  height={1000}
-                  className="object-cover rounded-2xl shadow-2xl"
-                  data-ai-hint={crowdImage?.imageHint}
-                />
-              </div>
-              <div className="hidden md:block absolute -bottom-8 -right-8 w-2/3 aspect-square z-0 transform rotate-6">
-                 <Image
-                  src={cocktailImage?.imageUrl || `https://picsum.photos/seed/cocktail/800/800`}
-                  alt="Craft cocktail"
-                  width={800}
-                  height={800}
-                  className="object-cover rounded-2xl shadow-xl"
-                  data-ai-hint={cocktailImage?.imageHint}
-                />
-              </div>
+export default function Atmosphere() {
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
+
+    function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
+        const { left, top } = currentTarget.getBoundingClientRect();
+        mouseX.set(clientX - left);
+        mouseY.set(clientY - top);
+    }
+
+    return (
+        <section
+            className="relative py-40 overflow-hidden bg-black text-white group"
+            onMouseMove={handleMouseMove}
+        >
+            {/* Spotlight Effect */}
+            <motion.div
+                className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+                style={{
+                    background: useMotionTemplate`
+            radial-gradient(
+              650px circle at ${mouseX}px ${mouseY}px,
+              rgba(251, 98, 65, 0.15),
+              transparent 80%
+            )
+          `,
+                }}
+            />
+
+            <div className="container relative z-10 px-4 text-center">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+                    <p className="text-neon-orange uppercase tracking-[0.3em] text-sm font-bold mb-4">
+                        The Vibe
+                    </p>
+                    <h2 className="text-5xl md:text-7xl font-headline font-black uppercase tracking-widest mb-8">
+                        Electric Air
+                    </h2>
+                    <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto font-light leading-relaxed">
+                        From the crack of the cue ball to the bass in the lounge.
+                        <span className="text-white block mt-2">Every moment resonates.</span>
+                    </p>
+
+                    {/* Abstract Grid that reveals on hover */}
+                    <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 border border-white/5">
+                        {['Rhythm', 'Taste', 'Sound', 'Light'].map((word, i) => (
+                            <div key={word} className="bg-black py-12 flex flex-col items-center justify-center gap-4 group/item hover:bg-white/5 transition-colors duration-500">
+                                <div className="w-2 h-2 rounded-full bg-neon-orange opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                <span className="uppercase tracking-[0.2em] text-sm text-white/40 group-hover/item:text-white transition-colors">{word}</span>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
-          </FadeIn>
-          <FadeIn direction="left" delay={200}>
-            <div className="text-center md:text-left">
-              <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl lg:text-6xl font-headline">
-                The Vibe is <br className="hidden lg:block" /><span className="text-primary" style={{ textShadow: '0 0 12px hsl(var(--primary) / 0.7), 0 0 20px hsl(var(--primary) / 0.5)'}}>Electric</span>
-              </h2>
-              <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg text-foreground/80">
-                Immerse yourself in the energy. From the pulsing music to the craft cocktails, every detail is curated to create an unforgettable atmosphere. This is where memories are made and nights come alive.
-              </p>
-              <Button asChild size="lg" className="mt-8">
-                <Link href="#booking">Book Your Experience</Link>
-              </Button>
-            </div>
-          </FadeIn>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 }

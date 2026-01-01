@@ -1,34 +1,44 @@
+"use client";
+
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
-  return (
-    <footer className="bg-secondary/20">
-      <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <Link href="/" className="text-2xl font-bold tracking-tighter text-primary font-headline">
-            Shuffles
-          </Link>
-          <div className="text-center md:text-left text-foreground/70">
-            <p>Pueblo De Panay, Near Roxas City Terminal</p>
-            <p>Mon - Thu: 4 PM - 12 AM | Fri - Sun: 2 PM - 2 AM</p>
-          </div>
-          <div className="flex gap-4">
-            <Link href="#" aria-label="Facebook">
-              <Facebook className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
-            </Link>
-            <Link href="#" aria-label="Instagram">
-              <Instagram className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
-            </Link>
-            <Link href="#" aria-label="Twitter">
-              <Twitter className="h-6 w-6 text-foreground/70 hover:text-primary transition-colors" />
-            </Link>
-          </div>
-        </div>
-        <div className="mt-8 border-t border-border/50 pt-8 text-center text-sm text-foreground/50">
-          <p>&copy; {new Date().getFullYear()} Shuffles Entertainment. All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
+    return (
+        <footer className="bg-black text-white py-20 border-t border-white/5">
+            <div className="container px-4 grid md:grid-cols-2 gap-16 items-start">
+
+                {/* Brand */}
+                <div className="flex flex-col items-start gap-8">
+                    <Link href="/" className="font-headline text-4xl font-black uppercase tracking-widest">
+                        Shuffles
+                    </Link>
+                    <div className="space-y-2 text-white/60 font-light">
+                        <p>Pueblo De Panay</p>
+                        <p>Near Roxas City Terminal</p>
+                        <p>Roxas City, Capiz</p>
+                    </div>
+                    <div className="space-y-1">
+                        <p className="text-neon-orange uppercase tracking-wider text-sm font-bold">Open Daily</p>
+                        <p className="text-white/80">10:00 AM - 2:00 AM</p>
+                    </div>
+                </div>
+
+                {/* Minimal Nav */}
+                <div className="flex flex-col md:items-end gap-6 text-2xl font-bold uppercase tracking-tighter">
+                    <Link href="#book" className="hover:text-neon-orange transition-colors">Book a Table</Link>
+                    <Link href="#experience" className="hover:text-neon-orange transition-colors">Experience</Link>
+                    <Link href="#" className="hover:text-neon-orange transition-colors">Contact</Link>
+                </div>
+
+            </div>
+
+            <div className="container px-4 mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-xs text-white/30 uppercase tracking-widest">
+                <p>© 2025 Shuffles. All rights reserved.</p>
+                <div className="flex gap-4 mt-4 md:mt-0">
+                    <Link href="#" className="hover:text-white">Instagram</Link>
+                    <Link href="#" className="hover:text-white">Facebook</Link>
+                </div>
+            </div>
+        </footer>
+    );
 }
