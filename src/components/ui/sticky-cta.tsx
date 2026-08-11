@@ -23,7 +23,7 @@ export default function StickyCTA() {
         >
             <Link
                 href="#book"
-                className="w-full max-w-sm bg-neon-orange text-white font-bold uppercase tracking-widest py-4 text-center shadow-2xl shadow-neon-orange/20 rounded-none"
+                className="w-full max-w-sm bg-[hsl(var(--brand))] text-[hsl(var(--brand-contrast))] font-bold uppercase tracking-widest py-4 text-center shadow-2xl rounded-none"
             >
                 Book Now
             </Link>

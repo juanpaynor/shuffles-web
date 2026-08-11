@@ -50,7 +50,35 @@ const config = {
         neon: {
           orange: "#FB6241",
           secondary: "#AA3A2F",
-        }
+        },
+
+        // Adventure Axis — parent brand (amber/gold gradient mark)
+        axis: {
+          DEFAULT: "#F2A93B",
+          gold: "#F2A93B",
+          amber: "#EE8B4E",
+          ink: "#0E0E10",
+          slate: "#191920",
+        },
+
+        // Shuffles — hub 1 (maroon + coral)
+        shuffles: {
+          DEFAULT: "#E8674A",
+          maroon: "#5E1626",
+          coral: "#E8674A",
+        },
+
+        // BayRox — hub 2 (bright tropical multicolor)
+        bayrox: {
+          DEFAULT: "#E8412E",
+          yellow: "#F9D949",
+          red: "#E8412E",
+          green: "#5FB55A",
+          blue: "#3B8FD4",
+          orange: "#F08A32",
+          cream: "#FFF6E5",
+          ink: "#1F2933",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -58,8 +86,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        body: ["var(--font-sans)", "sans-serif"],
         sans: ["var(--font-sans)", "sans-serif"],
         headline: ["var(--font-headline)", "sans-serif"],
+        display: ["Fredoka", "var(--font-headline)", "sans-serif"],
       },
       keyframes: {
         "fade-in": {

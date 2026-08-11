@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from '@/components/ui/button';
+import Logo from '@/components/site/logo';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 
@@ -61,17 +61,29 @@ export default function Hero() {
             className="h-1 bg-neon-orange mb-8 mx-auto shadow-[0_0_20px_rgba(251,98,65,0.8)]"
           />
 
-          <h1 className="font-headline text-6xl font-black uppercase tracking-widest text-white sm:text-8xl md:text-9xl leading-none drop-shadow-2xl">
-            Shuffles
-          </h1>
+          <h1 className="sr-only">Shuffles Roxas City</h1>
+          <Logo brand="shuffles" height={140} priority className="mx-auto drop-shadow-2xl md:!h-[200px]" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="mt-4 text-sm font-bold tracking-[0.5em] text-neon-orange uppercase"
+            className="mt-6 text-sm font-bold tracking-[0.4em] text-neon-orange uppercase"
           >
             Est. 2025 • Roxas City
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.3, duration: 0.8 }}
+            className="mt-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white/40"
+          >
+            An{' '}
+            <Link href="/" className="text-white/70 transition-colors hover:text-axis-gold">
+              Adventure Axis
+            </Link>{' '}
+            Hub
           </motion.div>
         </motion.div>
 
